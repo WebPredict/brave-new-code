@@ -1,4 +1,4 @@
-package wp.core;
+package wp.utils;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -11,9 +11,9 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 
-public class ReplaceWord {
+public class RemoveLine {
 
-	public ReplaceWord (String dir, final String extension, String from, String to) throws Exception {
+	public RemoveLine (String dir, final String extension, String remove) throws Exception {
 		File	root = new File(dir);
 		
 		String []	fileNames = root.list(new FilenameFilter () {
@@ -35,11 +35,10 @@ public class ReplaceWord {
 				
 				String	next;
 				while ((next = br.readLine()) != null) {									
-					if (next.indexOf(from) != -1)
-						buf.append(next.replaceAll(from, to));
-					else
+					if (next.indexOf(remove) == -1) {
 						buf.append(next);
-					buf.append(WebUtils.NL);											
+						buf.append(WebUtils.NL);
+					}
 				}
 				
 				br.close();
@@ -60,12 +59,12 @@ public class ReplaceWord {
 	
 	public static void main (String [] args) throws Exception {
 		
-		if (args.length < 4) {
-			System.out.println ("Usage: ReplaceWord <dir> <extension> <from> <to>");
+		if (args.length < 3) {
+			System.out.println ("Usage: ChangeLine <dir> <extension> <remove>");
 			System.exit(1);
 		}
 		
-		new ReplaceWord(args [0], args [1], args [2], args [3]);
+		new RemoveLine(args [0], args [1], args [2]);
 		
 	}
 }

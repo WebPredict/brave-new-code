@@ -11,6 +11,8 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 
+import wp.utils.WebUtils;
+
 public class ChangeLine {
 
 	public ChangeLine (String dir, final String extension, String from, String to) throws Exception {

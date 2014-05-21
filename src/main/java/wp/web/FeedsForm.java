@@ -11,8 +11,8 @@ import org.apache.struts.action.ActionMapping;
 import org.apache.struts.action.ActionMessages;
 import org.hibernate.tool.hbm2x.StringUtils;
 
-import wp.core.Utils;
 import wp.model.Feed;
+import wp.utils.Utils;
 
 /**
  * @struts.form name="feedsForm"

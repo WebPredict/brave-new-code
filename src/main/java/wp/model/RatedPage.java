@@ -16,7 +16,7 @@ import javax.persistence.OneToOne;
 import javax.persistence.Transient;
 
 import wp.core.PageStats;
-import wp.core.Utils;
+import wp.utils.Utils;
 
 @Entity
 public class RatedPage implements Serializable {

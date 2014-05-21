@@ -1,6 +1,7 @@
-package wp.core;
+package misc;
 
 import junit.framework.TestCase;
+import wp.core.Rater;
 import wp.model.UserStats;
 
 public class RatingTest extends TestCase

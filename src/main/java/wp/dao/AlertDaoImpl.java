@@ -17,13 +17,13 @@ import wp.core.CachedURL;
 import wp.core.Rater;
 import wp.core.UserDisabledException;
 import wp.core.UserQuotaException;
-import wp.core.Utils;
-import wp.core.WebUtils;
 import wp.model.Alert;
 import wp.model.AlertResult;
 import wp.model.Prediction;
 import wp.model.User;
 import wp.model.UserStats;
+import wp.utils.Utils;
+import wp.utils.WebUtils;
 
 /**
  * @spring.bean id="alertDao"

@@ -12,10 +12,10 @@ import org.apache.struts.action.ActionMapping;
 import org.apache.struts.action.ActionMessage;
 import org.apache.struts.validator.ValidatorForm;
 
-import wp.core.Utils;
 import wp.model.Privacy;
 import wp.model.User;
 import wp.service.UserService;
+import wp.utils.Utils;
 
 /**
  * @struts.form name="userForm"

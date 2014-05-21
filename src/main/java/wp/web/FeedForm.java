@@ -7,8 +7,8 @@ import java.util.Date;
 import org.apache.struts.validator.ValidatorForm;
 import org.hibernate.tool.hbm2x.StringUtils;
 
-import wp.core.Utils;
 import wp.model.Feed;
+import wp.utils.Utils;
 
 /**
  * @struts.form name="feedForm"

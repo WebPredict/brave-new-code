@@ -1,4 +1,4 @@
-package wp.core;
+package wp.utils;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
@@ -24,6 +24,9 @@ import java.util.zip.ZipOutputStream;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang.StringUtils;
+
+import wp.core.Constants;
+import wp.core.Rater;
 
 public class Utils {
 

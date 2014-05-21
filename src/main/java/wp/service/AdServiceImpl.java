@@ -13,12 +13,12 @@ import wp.core.AlreadyExistsException;
 import wp.core.Rater;
 import wp.core.RecentStats;
 import wp.core.SearchResult;
-import wp.core.Utils;
 import wp.dao.AdDao;
 import wp.model.Ad;
 import wp.model.AdProblem;
 import wp.model.RatedPage;
 import wp.model.User;
+import wp.utils.Utils;
 
 /**
  * @spring.bean id="adService"

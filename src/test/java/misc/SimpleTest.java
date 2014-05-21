@@ -1,4 +1,4 @@
-package wp.core;
+package misc;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -12,7 +12,12 @@ import java.util.zip.ZipOutputStream;
 
 import org.apache.commons.io.FileUtils;
 
+import wp.core.CachedURL;
+import wp.core.Rater;
+import wp.core.Upgrader;
+import wp.core.WordStats;
 import wp.model.ParsedPage;
+import wp.utils.WebUtils;
 
 public class SimpleTest {
 

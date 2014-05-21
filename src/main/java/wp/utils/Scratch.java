@@ -1,4 +1,4 @@
-package wp.core;
+package wp.utils;
 
 import java.util.ArrayList;
 import java.util.HashMap;

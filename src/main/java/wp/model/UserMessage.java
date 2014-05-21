@@ -13,7 +13,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Transient;
 
 import wp.core.Stringable;
-import wp.core.Utils;
+import wp.utils.Utils;
 
 @Entity
 public class UserMessage implements Stringable, Serializable {

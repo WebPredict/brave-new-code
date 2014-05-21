@@ -1,4 +1,4 @@
-package wp.core;
+package wp.utils;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -35,6 +35,8 @@ import org.w3c.dom.Text;
 import org.w3c.tidy.Configuration;
 import org.w3c.tidy.Tidy;
 
+import wp.core.CachedURL;
+import wp.core.Rater;
 import wp.model.LinkInfo;
 import wp.model.ParsedPage;
 

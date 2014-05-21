@@ -1,4 +1,4 @@
-package wp.core;
+package misc;
 
 import java.util.Date;
 import java.util.Properties;

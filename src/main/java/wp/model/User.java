@@ -25,7 +25,7 @@ import javax.persistence.Transient;
 
 import org.hibernate.tool.hbm2x.StringUtils;
 
-import wp.core.Utils;
+import wp.utils.Utils;
 
 @Entity
 @Table(name="WebUser")

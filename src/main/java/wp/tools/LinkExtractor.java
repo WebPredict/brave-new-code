@@ -6,8 +6,8 @@ import java.util.HashSet;
 import java.util.List;
 
 import wp.core.CachedURL;
-import wp.core.WebUtils;
 import wp.model.LinkInfo;
+import wp.utils.WebUtils;
 
 /**
  * Extracts all links from a URL and saves to a file.

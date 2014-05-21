@@ -188,7 +188,6 @@ public class BTree {
 		return (root);
 	}
 
-	@TestAnnotation(worstCase="O(LogN)")
 	public void	insert (int data) {
 		root.insert(data);
 	}

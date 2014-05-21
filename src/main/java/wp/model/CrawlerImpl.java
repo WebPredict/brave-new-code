@@ -37,10 +37,10 @@ import wp.core.CachedURL;
 import wp.core.Rater;
 import wp.core.UserDisabledException;
 import wp.core.UserQuotaException;
-import wp.core.Utils;
-import wp.core.WebUtils;
 import wp.dao.UserStatsDao;
 import wp.service.CrawlerService;
+import wp.utils.Utils;
+import wp.utils.WebUtils;
 
 @Entity
 @Table(name="Crawler")

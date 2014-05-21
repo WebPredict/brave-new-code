@@ -11,14 +11,14 @@ import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 import org.springframework.transaction.annotation.Transactional;
 
 import wp.core.CachedURL;
-import wp.core.Utils;
-import wp.core.WebUtils;
 import wp.model.Alert;
 import wp.model.Crawler;
 import wp.model.CrawlerImpl;
 import wp.model.CrawlerResult;
 import wp.model.LinkInfo;
 import wp.model.User;
+import wp.utils.Utils;
+import wp.utils.WebUtils;
 
 /**
  * @spring.bean id="crawlerDao"

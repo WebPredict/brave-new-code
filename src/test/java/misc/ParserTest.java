@@ -1,7 +1,9 @@
-package wp.core;
+package misc;
 
 import junit.framework.TestCase;
+import wp.core.CachedURL;
 import wp.model.ParsedPage;
+import wp.utils.WebUtils;
 
 public class ParserTest extends TestCase {
 

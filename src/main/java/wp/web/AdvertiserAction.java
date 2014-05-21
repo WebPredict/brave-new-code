@@ -18,12 +18,12 @@ import org.apache.struts.action.ActionMessages;
 
 import wp.core.AlreadyExistsException;
 import wp.core.Constants;
-import wp.core.WebUtils;
 import wp.model.Ad;
 import wp.model.AdStat;
 import wp.model.Advertiser;
 import wp.model.Prediction;
 import wp.model.User;
+import wp.utils.WebUtils;
 
 /**
  * @struts.action path="/FinishSignupAdvertiser" parameter="finishSignup" validate="false"

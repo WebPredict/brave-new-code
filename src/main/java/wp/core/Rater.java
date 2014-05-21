@@ -37,6 +37,8 @@ import wp.model.Prediction;
 import wp.model.RatedPage;
 import wp.model.User;
 import wp.model.UserStats;
+import wp.utils.Utils;
+import wp.utils.WebUtils;
 
 public class Rater {
 

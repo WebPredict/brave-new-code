@@ -1,7 +1,10 @@
 package wp.model;
 
-import wp.core.Utils;
+import wp.utils.Utils;
 
+/**
+ * Contains a link, the link text, and the immediate context of the link
+ **/
 public class LinkInfo {
 
 	private String	link;

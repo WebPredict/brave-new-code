@@ -29,8 +29,6 @@ import wp.core.IdNameProjection;
 import wp.core.Rater;
 import wp.core.RatingInfo;
 import wp.core.RecentStats;
-import wp.core.Utils;
-import wp.core.WebUtils;
 import wp.dao.ListInfo;
 import wp.model.Alert;
 import wp.model.AlertResult;
@@ -52,6 +50,8 @@ import wp.service.CrawlerService;
 import wp.service.GroupService;
 import wp.service.PhotoService;
 import wp.service.UserConfigService;
+import wp.utils.Utils;
+import wp.utils.WebUtils;
 
 /**
  * @struts.action path="/EditUser" parameter="editUser" validate="false"

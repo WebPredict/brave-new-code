@@ -1,6 +1,8 @@
 package wp.ws;
 
+import java.net.MalformedURLException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.Collection;
 import java.util.List;
 
@@ -20,6 +22,10 @@ import wp.model.RatedPage;
 import wp.model.Recommendation;
 import wp.model.UserStats;
 import wp.model.WordFreqPair;
+import wp.dao.UserStatsDao;
+import wp.dao.PageDao;
+import wp.dao.UserDao;
+import wp.service.RatingService;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
@@ -36,6 +42,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 import org.springframework.stereotype.Component;
+import org.springframework.beans.factory.annotation.Autowired;
 
 
 /**
@@ -48,9 +55,52 @@ import org.springframework.stereotype.Component;
 public class RatingResourceImpl implements RatingResource
 {
 
+	@Autowired
+	private RatingService	ratingService;
+
+	@Autowired
+	private UserStatsDao	userStatsDao;
+	
+	@Autowired
+	private PageDao			pageDao;
+
+	public RatingService getRatingService() {
+		return ratingService;
+	}
+
+	public void setRatingService(RatingService ratingService) {
+		this.ratingService = ratingService;
+	}
+
+	public UserStatsDao getUserStatsDao() {
+		return userStatsDao;
+	}
+
+	public void setUserStatsDao(UserStatsDao userStatsDao) {
+		this.userStatsDao = userStatsDao;
+	}
+
+	public PageDao getPageDao() {
+		return pageDao;
+	}
+
+	public void setPageDao(PageDao pageDao) {
+		this.pageDao = pageDao;
+	}
+
 	@DELETE
-	@Path("/{userId}/{pageId}")
-	public void		delete (@PathParam("userId") Long userId, @PathParam("pageId") long pageId) throws ResourceException {
+	@Path("/{userId}")
+	public void		delete (@PathParam("userId") Long userId, @QueryParam("pageUrl") String pageUrl) throws ResourceException {
+
+		try {
+		UserStats us = userStatsDao.findStatsFor(String.valueOf(userId));
+		RatedPage rp = us.getRatedPagesMap().get(new URL(pageUrl));
+
+		ratingService.delete(us, rp);
+		}
+		catch (Exception e) {
+			throw new ResourceException(e.getMessage());
+		}
 	}
 
 	@POST	
@@ -59,7 +109,15 @@ public class RatingResourceImpl implements RatingResource
 	public RatingInfo  rate (@PathParam("userId") Long userId, @QueryParam("url") String url, @QueryParam("rating") String rating, 
 						@QueryParam("comment") String comment, @QueryParam("cookieData") String cookieData) 
 		throws UserQuotaException, UserDoesntExistException, RatingOutOfRangeException, UserDisabledException, ResourceException {
-		return (null);
+				
+		try {
+			return (ratingService.rate(String.valueOf(userId), new URL(url), rating, comment, cookieData));
+		} catch (MalformedURLException e) {
+			throw new ResourceException(e.getMessage());
+		} catch (SQLException e) {
+			throw new ResourceException(e.getMessage());
+		}
+		
 	}
 
 	@POST	

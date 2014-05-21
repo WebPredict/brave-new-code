@@ -7,7 +7,7 @@ import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Random;
 
-import wp.core.WebUtils;
+import wp.utils.WebUtils;
 
 /**
  * Sends a combination of rate/predict requests to server at a certain rate and for a certain duration, and

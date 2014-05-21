@@ -18,7 +18,6 @@ import org.apache.commons.lang.StringUtils;
 import wp.core.Constants;
 import wp.core.Rater;
 import wp.core.SearchResult;
-import wp.core.Utils;
 import wp.dao.SearchDao;
 import wp.dao.SearchInfo;
 import wp.model.Group;
@@ -26,6 +25,7 @@ import wp.model.ItemType;
 import wp.model.ParsedPage;
 import wp.model.RatedPage;
 import wp.model.User;
+import wp.utils.Utils;
 
 /**
  * @spring.bean id="searchService"

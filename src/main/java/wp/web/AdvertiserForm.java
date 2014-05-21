@@ -6,9 +6,9 @@ import java.util.Date;
 import org.apache.commons.lang.StringUtils;
 import org.apache.struts.validator.ValidatorForm;
 
-import wp.core.Utils;
 import wp.model.Advertiser;
 import wp.service.AdvertiserService;
+import wp.utils.Utils;
 
 /**
  * @struts.form name="advertiserForm"

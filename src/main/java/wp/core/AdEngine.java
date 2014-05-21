@@ -12,6 +12,7 @@ import wp.model.Ad;
 import wp.model.ParsedPage;
 import wp.model.RatedPage;
 import wp.model.UserStats;
+import wp.utils.Utils;
 
 public class AdEngine {
 

@@ -12,6 +12,9 @@ import java.util.ArrayList;
 
 import org.apache.commons.io.FileUtils;
 
+import wp.utils.Utils;
+import wp.utils.WebUtils;
+
 public class CachedURL {
 
 	private String	urlStr;

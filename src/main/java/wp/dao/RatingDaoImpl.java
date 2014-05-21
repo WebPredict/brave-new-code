@@ -33,8 +33,6 @@ import wp.core.UserCloudInfo;
 import wp.core.UserDisabledException;
 import wp.core.UserDoesntExistException;
 import wp.core.UserQuotaException;
-import wp.core.Utils;
-import wp.core.WebUtils;
 import wp.core.WordCloudInfo;
 import wp.model.PageDiff;
 import wp.model.Prediction;
@@ -44,6 +42,8 @@ import wp.model.Recommendation;
 import wp.model.User;
 import wp.model.UserStats;
 import wp.model.WordFreqPair;
+import wp.utils.Utils;
+import wp.utils.WebUtils;
 
 /**
  * @spring.bean id="ratingDao"

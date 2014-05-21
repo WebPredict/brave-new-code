@@ -18,7 +18,7 @@ import javax.persistence.Transient;
 import org.apache.commons.lang.StringEscapeUtils;
 import org.apache.commons.lang.StringUtils;
 
-import wp.core.Utils;
+import wp.utils.Utils;
 
 @Entity
 public class ParsedPage {

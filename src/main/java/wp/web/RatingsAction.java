@@ -35,8 +35,6 @@ import wp.core.RecentStats;
 import wp.core.SearchResult;
 import wp.core.UserCloudInfo;
 import wp.core.UserMatch;
-import wp.core.Utils;
-import wp.core.WebUtils;
 import wp.core.WordCloudInfo;
 import wp.dao.ListInfo;
 import wp.dao.SearchInfo;
@@ -52,6 +50,8 @@ import wp.model.User;
 import wp.model.UserStats;
 import wp.model.WordFreqPair;
 import wp.service.SearchService;
+import wp.utils.Utils;
+import wp.utils.WebUtils;
 
 
 /**

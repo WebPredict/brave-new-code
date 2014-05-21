@@ -22,10 +22,10 @@ import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 
 import wp.core.Rater;
-import wp.core.WebUtils;
 import wp.model.CategorySet;
 import wp.model.User;
 import wp.service.UserService;
+import wp.utils.WebUtils;
 
 /**
  * @struts.action path="/AddOnGen" validate="false"

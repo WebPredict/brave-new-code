@@ -14,11 +14,11 @@ import org.apache.struts.action.ActionMessage;
 import org.apache.struts.action.ActionMessages;
 import org.apache.struts.validator.ValidatorForm;
 
-import wp.core.Utils;
 import wp.model.CategorySet;
 import wp.model.Features;
 import wp.model.UserConfig;
 import wp.service.UserConfigService;
+import wp.utils.Utils;
 
 /**
  * @struts.form name="userConfigForm"
